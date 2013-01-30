@@ -5,7 +5,7 @@
 		private $models;
 
 		public function setup($model, $settingsArray){
-			$modelName = get_class($model);//setup gets called for each model
+			$modelName = get_class($model);//setup() gets called for each model
 
 			$this->models[$modelName]['translatableFields'] = $model->actsAs['Translatable']['translatableFields'];
 			$this->models[$modelName]['name'] = $modelName;
@@ -38,5 +38,5 @@
 
 			return $results;
 		}	
-}
+	}
 ?>
