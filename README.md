@@ -1,0 +1,4 @@
+CakePHPTranslatableBehavior
+===========================
+
+CakePHP Translatable Behavior
