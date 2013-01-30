@@ -1,3 +1,5 @@
+ABOUT
+===========
 
 This behavior will pick between multilingual information stored in a database and
 store it in a variable that can be used in a view. This is much less complicated than
@@ -5,6 +7,7 @@ CakePHPs current default implementation of i18n functionality that requires stor
 extra information in separate tables.
 
 USAGE 
+============
 
 Each column should have the same name followed by a suffix to describe the language, 
 for example:
@@ -45,9 +48,9 @@ After the behavior has run you will get this added to your results
 You can use $title and $blogpost in your view to enable simple multi-lingual funcitonality.
 
 KNOWN LIMITATIONS
+=======
 
 This behavior only supports recursive 1 finds. Anything lower than that will be ignored.
 This is good enough for most cases and my needs. Adding recursive translating would have
 reduced performance when it is not needed. 
 
-=======
