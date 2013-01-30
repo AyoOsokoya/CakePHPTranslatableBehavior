@@ -21,17 +21,16 @@
 		} 
 
 		public function setDefaultStringLanguage($results, $primary = false){
-			//prevent data from CakePHPs paginate() getting processed
+			//prevent data from CakePHP's paginate() getting processed
 			if(isset($results[0][0]['count']) && !(isset($results[0][0]['id']))) return $results;
 			
 			foreach($this->models as $model) {
-
 				$name = $model['name'];
 				$translatableFields = $model['translatableFields'];
 
 				$results =(array)$results;
-				foreach($results as $key => &$result){//using references to update $results directly
 
+				foreach($results as $key => &$result){//using references to update $results directly
 					foreach($translatableFields as $translatableField) {
 						$result[$name][$translatableField] = $result[$name][$translatableField."_".$this->sessionLanguage];
 				}
