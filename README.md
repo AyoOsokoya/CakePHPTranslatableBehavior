@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 This behavior will pick between multilingual information stored in a database and
 store it in a variable that can be used in a view. This is much less complicated than
