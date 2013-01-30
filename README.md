@@ -8,6 +8,7 @@ USAGE
 
 Each column should have the same name followed by a suffix to describe the language, 
 for example:
+
 	blogpost_eng
 	blogpost_jpn
 	blogpost_rus
