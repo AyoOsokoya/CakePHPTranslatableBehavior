@@ -4,7 +4,7 @@
                 private $sessionLanguage;
 		private $models;
 
-		public function setup($model, $settingsArray){
+		public function setup($model, $settingsArray) {
 			$modelName = get_class($model);//setup() gets called for each model
 
 			$this->models[$modelName]['translatableFields'] = $model->actsAs['Translatable']['translatableFields'];
@@ -13,18 +13,17 @@
                 	$this->translatableFields = $settingsArray['translatableFields'];
 			$this->sessionLanguage = $_SESSION['Config']['language'];
 		}
-		
 
-		public function afterFind($model, $results, $primary = false){
+		public function afterFind($model, $results, $primary = false) {
 		        $results = $this->setDefaultStringLanguage($results, $primary);
 			return $results;
 		} 
 
-		public function setDefaultStringLanguage($results, $primary = false){
+		public function setDefaultStringLanguage($results, $primary = false) {
 			//prevent data from CakePHP's paginate() getting processed
 			if(isset($results[0][0]['count']) && !(isset($results[0][0]['id']))) return $results;
 			
-			foreach($this->models as $model) {
+			foreach($this->models as $model){
 				$name = $model['name'];
 				$translatableFields = $model['translatableFields'];
 
